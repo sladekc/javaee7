@@ -11,7 +11,7 @@
     <build>
         <finalName>demo</finalName>
         <plugins>
-            <plugin>
+          <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.2.1.Final</version>
@@ -42,6 +42,7 @@
                             <goal>wsgen</goal>
                         </goals>
                         <configuration>
+                            <destDir>${dummyGegenJava12Compilierung}</destDir>
                             <sei>de.akdb.oesio.readinggroup.jaxws.helloService.Hello</sei>
                             <genWsdl>true</genWsdl>
                         </configuration>

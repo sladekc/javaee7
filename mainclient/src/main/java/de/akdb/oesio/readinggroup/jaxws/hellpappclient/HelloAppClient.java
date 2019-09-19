@@ -1,13 +1,13 @@
-package de.akdb.oesio.readinggroup.jaxws.halloAppClient;
+package de.akdb.oesio.readinggroup.jaxws.hellpappclient;
 
 import de.akdb.oesio.readinggroup.jaxws.helloService.HelloService;
 
 import javax.xml.ws.WebServiceRef;
 
 public class HelloAppClient {
-    @WebServiceRef(wsdlLocation =
-            "http://localhost:8080/demo/Hello?WSDL")
-    private static HelloService service;
+//    @WebServiceRef(wsdlLocation =
+//            "http://localhost:8080/demo/Hello?WSDL")
+    private static HelloService service= new HelloService();
 
     /**
      * @param args the command line arguments
