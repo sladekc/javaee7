@@ -1,17 +1,26 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>reading-group-server</artifactId>
+    <artifactId>rest-hello</artifactId>
     <packaging>war</packaging>
+
     <parent>
         <groupId>de.akdb.oesio</groupId>
-        <artifactId>reading-group</artifactId>
+        <artifactId>rest</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <build>
-        <finalName>demo</finalName>
+        <finalName>rest-hello</finalName>
+
         <plugins>
-          <plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.2.1.Final</version>
@@ -32,4 +41,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+    </dependencies>
+
 </project>

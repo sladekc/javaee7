@@ -7,8 +7,8 @@
 
     <modules>
         <module>server</module>
-        <module>client</module>
-        <module>mainclient</module>
+        <module>soap</module>
+        <module>rest</module>
     </modules>
 
     <properties>
@@ -36,7 +36,6 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.25</version>
         </dependency>
-
     </dependencies>
 
 </project>
