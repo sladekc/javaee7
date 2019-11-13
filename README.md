@@ -46,4 +46,4 @@ Project language level: 8
 <http://localhost:8080/soap-client-web/HelloServlet>
 
 ## Rest
-<http://localhost:8080/rest-hello/helloworld>
+<http://localhost:8080/rest/helloworld>

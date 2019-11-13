@@ -1,6 +1,6 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>rest-hello</artifactId>
+    <artifactId>rest-server</artifactId>
     <packaging>war</packaging>
 
     <parent>
@@ -10,13 +10,13 @@
     </parent>
 
     <build>
-        <finalName>rest-hello</finalName>
+        <finalName>rest</finalName>
 
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
 
