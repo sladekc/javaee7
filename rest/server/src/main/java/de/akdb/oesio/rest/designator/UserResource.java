@@ -20,13 +20,31 @@ public class UserResource {
         return Response.created(uriInfo.getAbsolutePath()).build();
     }
 
+    @PUT
+    @Consumes(MediaType.TEXT_PLAIN)
+    public Response createUserByCookie(@CookieParam("user") String user) {
+        this.user = user;
+
+        return Response.created(uriInfo.getAbsolutePath()).build();
+    }
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUser() {
+    public Response getUserJson() {
         if (user == null) {
             return Response.noContent().build();
         } else {
-            return Response.ok(user, MediaType.APPLICATION_JSON).build();
+            return Response.ok(user + " json", MediaType.APPLICATION_JSON).build();
+        }
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUserXML() {
+        if (user == null) {
+            return Response.noContent().build();
+        } else {
+            return Response.ok(user + " xml", MediaType.APPLICATION_XML).build();
         }
     }
 

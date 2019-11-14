@@ -11,6 +11,7 @@
     * @PUT
     * @DELETE
     * @HEAD
+    * @OPTIONS
 * Pfad
     * @Path
     * @ApplicationPath
