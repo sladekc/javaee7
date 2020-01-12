@@ -8,7 +8,7 @@
 `docker pull jboss/wildfly`
 5. Image um Admin erweitern, damit Remote Verwaltung für JBoss möglich ist.  
 Befehl muss aus dem Verzeichnis ausgeführt werden in dem die Datei Dockerfile liegt.  
-`docker build -t jboss/wildfly-admin.`
+`docker build -t jboss/wildfly-admin .`
 6. Container erzeugen (startet auch gleich)  
 `docker run -p 8080:8080 -p 9990:9990 -p 8787:8787 --name jboss jboss/wildfly-admin`
 
